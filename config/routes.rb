@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   get '/book/edit/:id' => 'books#edit'
   post 'book/update/:id' => 'books#update'
+
+  get 'book/delete/:id' => 'books#destroy'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

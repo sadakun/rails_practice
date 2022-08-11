@@ -6,6 +6,7 @@
     <div class="col-sm-6 p-3">
       <p><%= flash[:addMessage]%></p>
       <p><%= flash[:updateMessage]%></p>
+      <p><%= flash[:deleteMessage]%></p>
       
       <% @books.each do |book| %>
 
@@ -23,6 +24,7 @@
               <div class="container text-center mt-5">
                 <%#= link_to 'SHOW', show_path(book), style:"text-decoration:none; color: grey;" %>
                 <a href="/show/<%= book.id %>">SHOW</a>
+                <a href="book/delete/<%= book.id %>" OnClick="return confirm('Are you sure want to delete this book?')">DELETE</a>
               </div>
             </div>
           </div>
